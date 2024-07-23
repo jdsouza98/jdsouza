@@ -43,7 +43,7 @@ Playwright
 
 
 
-Installation of playwright
+**Installation of playwright**
 
 Pre-requisites :
 1. Nodejs - open source platform which is used to run the javascript - set the path variable
@@ -63,7 +63,7 @@ Installing the playwright for the project - using vs code extension
 
 
 
-Structure of the playwright project
+**Structure of the playwright project**
 
 - node_modules - all the jars are installed- that is dependencies
 - Tests - where we store all out testscripts
@@ -72,7 +72,7 @@ Structure of the playwright project
 
 
 
-Command to execute/run the code:
+**Command to execute/run the code:**
 - npx playwright test     — runs all the test cases that’s in headless mode
 - npx playwright tests — headed	- it will run in headed mode[where browser will be opneed]
 - npx playwright test BasicsTest.spec.js        - it will execute the specified file
@@ -84,7 +84,7 @@ To show the reports
 npx playwright show-report
 
 
-Why async/await required ?
+**Why async/await required ?**
 
 Javascript is an asynchronous - it doesn’t execute in the order or sequence , even if the promise is not resolved it will move to the next step to overcome this we need to provide the promise by using the await and async methods
 Every step of the code will return the promise - different state - - resolved , pending and rejected
@@ -93,7 +93,7 @@ To make the sequential execution we need to write the await async that it will r
 
 
 
-Fixtures: global fixtures 
+**Fixtures: global fixtures **
  that’s globally available in the scripts- we have fixtures
 Fixtures will contain the the methods - through which we can automate the scripts
 All the methods click, is displayed or any other methods - these methods will be available due to fixtures
@@ -124,7 +124,7 @@ We can change the browser name in config file
 
  
 
-About configuration file
+**About configuration file**
 
 
 Section 3 : how to create the playwright test and run
@@ -144,7 +144,7 @@ Way2
   await page.fill("#input-lastname","Dsouza");
 
 
-Customised Locators : 
+**Customised Locators : **
 
 - To  identify the elements on the webpage and perform actions on those locators
 
@@ -178,7 +178,7 @@ const links=await page.$$("a");
 
 
 
-Build in playwright locators
+**Built in playwright locators**
 
 1. Page.getByRole()
 2. page.getByText()
@@ -194,7 +194,7 @@ Build in playwright locators
 
 
 
-Assertions : there are done to perform the validations in the UI
+**Assertions : there are done to perform the validations in the UI**
 
 List of assertion
 await expect(locator).toBeAttached()	Element is attached
@@ -234,7 +234,7 @@ Use .not  before every assertion function
 
 
 
-Hard assertions vs soft assertions
+**Hard assertions vs soft assertions**
 
 
 Hard assertions - If the assertions fails - then the code/ execution will be terminated
@@ -249,9 +249,9 @@ Soft assertions - if the assertions fails - then the code will continue and it w
 
 
 
-UI actions 
+**UI actions **
 
-1. Input box
+**1. Input box**
 
 
 fill() - is used to enter the values
@@ -267,7 +267,7 @@ await page.locator("#input-email").fill("jo123@gmail.com")
 
 
 
-2. RadioButtons and checkbox [both validations looks same - check()]
+**2. RadioButtons and checkbox [both validations looks same - check()]**
 
 Validations
 
@@ -279,7 +279,7 @@ Validations
 
 
 
-Checking the multiple checkbox
+**Checking the multiple checkbox**
 1. Store the values into array/objects that you want to check/select
 2. Iterarte through it and select it
 
@@ -290,7 +290,7 @@ uncheck()
 
 
 
-3. How to handle the dropdown
+**3. How to handle the dropdown**
 	1. Using select tag
  These are the different way to select the  SELECT tag drop-down:
 // await page.locator("#country").selectOption({label:"India"})
@@ -324,7 +324,7 @@ await page.waitForTimeout(4000)
 
 
 
-4. How to handle the multi select dropdown- select tag
+**4. How to handle the multi select dropdown- select tag**
 	- We can store it in array and select the multiple values
 await page.goto("https://testautomationpractice.blogspot.com/")
   await page.selectOption("#colors",['Blue','Red','Yellow'])
@@ -334,7 +334,7 @@ await page.goto("https://testautomationpractice.blogspot.com/")
 
 
 
-5. How to handle the bootstrap dropdown - without select option
+5. **How to handle the bootstrap dropdown - without select option**
 
 
 await page.goto("https://www.jquery-az.com/boots/demo.php?ex=63.0_2#google_vignette")
@@ -353,7 +353,7 @@ await page.goto("https://www.jquery-az.com/boots/demo.php?ex=63.0_2#google_vigne
 
 
 
-6. Handle autosuggestion dropdown
+**6. Handle autosuggestion dropdown**
 
 	- providing the few character in the input field and searching for the data
 
@@ -385,13 +385,13 @@ await page.goto("https://www.amazon.in/")
 
 
 
-7. Handle the hidden suggestions
+7.** Handle the hidden suggestions**
  
 Pending
 
 
 
-8.Handling the alert
+**8.Handling the alert**
 
 1. Playwright will automatically handle the alert dialogues 
 2. We need to handle the alert first and then click on Ok on the alert
@@ -412,7 +412,7 @@ page.on('dialog',async dialog=>
 
 
 
-9/how to handle the frames/ ig]\frames
+**9/how to handle the frames/ ig]\frames**
 
 
 9.  handling the Iframe
@@ -436,7 +436,7 @@ const inputBox=await page.frameLocator("frame[src='frame_1.html']").locator("//i
 await inputBox.fill("Jonita")
 
 
-10.handling the nested frames
+**10.handling the nested frames**
 
 If the frames are inside another frames - then we can use it
 
@@ -449,7 +449,7 @@ If the frames are inside another frames - then we can use it
 
 
 
-11. How to handle the webtable and paginations
+11.** How to handle the webtable and paginations**
 
 1.1 Handling the web tables
 
@@ -496,7 +496,7 @@ await selectProduct(rows,page,'Product 4')
 
 
 
-12. Handling the date
+12**. Handling the date**
 
 
 Logic to handle the date picker
@@ -572,7 +572,7 @@ while(true)
 
 
 
-13. Handle the mouse hover actions
+**13. Handle the mouse hover actions**
 
 How to mouseover
 1. Store the locator whoever you want to mouse hover
@@ -589,7 +589,7 @@ Example
 
 
 
-14. Handle the right click option
+**14. Handle the right click option**
 
 1. We can perform  right left and middle operation
 Syntax:
@@ -607,7 +607,7 @@ Syntax:
 
 
 
-15. Handle the double click
+**15. Handle the double click**
 
     const dblclickBtn=await page.locator("//button[text()='Copy Text']")
     await dblclickBtn.dblclick()
@@ -620,7 +620,7 @@ Syntax:
 
 
 
-16. Handle the drag and drop
+**16. Handle the drag and drop**
 dragTo keyword is used
 
  const dragEle=await page.locator("#box3")
@@ -630,7 +630,7 @@ dragTo keyword is used
 
 
 
-17. Perform mouse actions
+**17. Perform mouse actions**
 To use any keyboard actions
 
 Use keyboard 
@@ -649,7 +649,7 @@ await page.goto("https://gotranscript.com/text-compare")
 
 
 
-18.dealing with uploading the files
+**18.dealing with uploading the files**
 
 
 We should use the setinputfiles(“”) - single file
@@ -667,7 +667,7 @@ await page.waitForTimeout(4000);
 
 
 
-19.Hooks : avoid duplicate code 
+1**9.Hooks : avoid duplicate code** 
 Beforeeach - executed before each individual test
 After each - executed after each individual test
 beforeAll - executed once before any of the test starts running
@@ -706,7 +706,7 @@ In beforeEach and afterEach we can use the page fixture - same syntax as above b
 
 
 
-20.Achieve the grouping concepts
+**20.Achieve the grouping concepts**
 
 
 - Grouping of the test cases under the describe block
@@ -730,7 +730,7 @@ test.describe("group1",()=>
 
 
 
-21: capturing the screenshots
+**21: capturing the screenshots**
 
 There are 3 ways we can capture the scereenshot
 
@@ -771,7 +771,7 @@ test.only("Element screenshot",async({page})=>
 
 
 
-22. How to record a video of the tests
+**22. How to record a video of the tests**
 
 In config.js we can change the setting of the video or screenshot inside the use array
 We have multiple options for the video recording like when to record the video like only during the failure/ on / off
@@ -783,7 +783,7 @@ use: {
 
 
 
-23.Record and playback - codegen
+**23.Record and playback - codegen**
 
 Execute— npx playwright codeine
 
@@ -792,7 +792,7 @@ Here the code will be generated and stored inside the specified file
 
 
 
-24. Trace viewver
+**24. Trace viewver**
 
 In config we need to do some changes in the use:
 
@@ -805,8 +805,7 @@ Here we can check everything
 
 
 
-
-25.Tags
+**25.Tags**
 
 
 
@@ -828,13 +827,12 @@ console.log("Tests1")
 })
 
 
-How to run the file
-
+**How to run the file**
 npx playwright test annotations.spec.js --project=chromium --grep @sanity —grep-invert @regression
 
 
 
-@Annotations
+**@Annotations**
 
 
 
