@@ -6,7 +6,7 @@ Playwright
 	
 	
 
-About playwright
+**About playwright**
 
 1. Playwright will support web browser , API , mobile browsers- but will not support the native mobile apps[real mobile device]
 2. It supports - java, javascript/typescript , python .net
@@ -16,7 +16,7 @@ About playwright
 6. it has auto wait capability
 
 
-Features of playwright
+**Features of playwright**
 1. Free and open-source[no need to buy licence anybody can download and use]
 2. Multiple languages , multiple browser , multiple OS
 3. Easy set up and configuration
@@ -31,7 +31,7 @@ Features of playwright
 12. Support parameterisations
 13. Inbuilt assertions [we don’t have to use the external assertions]
 
-Advanced features:
+**Advanced features:**
 1. Tracing and debugging - it provides automatic screens , video 
 2. Time travelling is easy
 3. It can take the cookies info and in incognito we can store those cookies[browser context management]
